@@ -2,3 +2,8 @@
 terraform.tfstate
 terraform.tfstate.*
 backup
+challenge1/.terraform.lock.hcl
+
+dynamic/
+
+*.hcl

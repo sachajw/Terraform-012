@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "eu-west-2"
+  region = "af-south-1"
 }
 
 
@@ -59,4 +59,3 @@ variable "myobject" {
     port = [22, 25, 80]
   }
 }
-
