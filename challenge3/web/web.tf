@@ -1,7 +1,7 @@
 
 resource "aws_instance" "web" {
-    ami = "ami-032598fcc7e9d1c7a"
-    instance_type = "t2.micro"
+    ami = "ami-0d50aa12878bdd456"
+    instance_type = "t3.micro"
     security_groups = [module.sg.sg_name]
     user_data = file("./web/server-script.sh")
     tags = {

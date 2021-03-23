@@ -1,20 +1,20 @@
 provider "aws" {
-    region = "eu-west-2"
+  region = "af-south-1"
 }
 
 module "db" {
-    source = "./db"
-    
+  source = "./db"
+
 }
 
 module "web" {
-    source = "./web"  
+  source = "./web"
 }
 
 output "PrivateIP" {
-    value = module.db.PrivateIP
+  value = module.db.PrivateIP
 }
 
 output "PublicIP" {
-    value = module.web.pub_ip
+  value = module.web.pub_ip
 }
