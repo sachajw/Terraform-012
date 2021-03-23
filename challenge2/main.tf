@@ -1,10 +1,10 @@
 provider "aws" {
-    region = "eu-west-2"
+    region = "af-south-1"
 }
 
 resource "aws_instance" "db" {
-    ami = "ami-032598fcc7e9d1c7a"
-    instance_type = "t2.micro"
+    ami = "ami-0d50aa12878bdd456"
+    instance_type = "t3.micro"
 
     tags = {
         Name = "DB Server"
@@ -12,8 +12,8 @@ resource "aws_instance" "db" {
 }
 
 resource "aws_instance" "web" {
-    ami = "ami-032598fcc7e9d1c7a"
-    instance_type = "t2.micro"
+    ami = "ami-0d50aa12878bdd456"
+    instance_type = "t3.micro"
     security_groups = [aws_security_group.web_traffic.name]
     user_data = file("server-script.sh")
     tags = {
