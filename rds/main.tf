@@ -1,5 +1,5 @@
 provider "aws" {
-    region = "af-south-1"
+    region = "eu-west-2"
 }
 
 resource "aws_db_instance" "myRDS" {
